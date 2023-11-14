@@ -1,22 +1,3 @@
-import adapter from '@sveltejs/adapter-static';
-
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-	kit: {
-		adapter: adapter({
-			fallback: '404.html'
-		}),
-		paths: {
-			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
-		}
-	}
-};
-
-export default config;
-
-You can use GitHub actions to automatically deploy your site to GitHub Pages when you make a change. Here's an example workflow:
-.github/workflows/deploy.yml
-
 name: Deploy to GitHub Pages
 
 on:
